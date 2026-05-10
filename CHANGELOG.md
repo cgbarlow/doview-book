@@ -36,6 +36,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - `tools/generate_part_readmes.py` — helper that generates the per-Part READMEs.
 - `tools/zero_pad_chapter_names.py` — one-shot helper that renamed chapter folders + Markdown files to the Xnn format.
 - ADR-012 — Zero-padded chapter folder and file names (supersedes ADR-006).
+- `skills/doview-outcomes-answer/evals/RESULTS.md` and `runs/` — Phase 5 evaluation outputs (8/8 + 7/7 assertion PASS).
+- `skills/doview-image-retriever/evals/RESULTS.md` and `runs/` — Phase 5 evaluation outputs (6/6 assertion PASS on the primary Mermaid-first path).
 
 ### Changed
 
