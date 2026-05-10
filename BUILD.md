@@ -61,6 +61,16 @@ Pair files for each chapter share the same folder, so the relative cross-links r
 
 The skill is generic — point it at any directory of paired question/tool PDFs and it'll do the same. See [`skills/pdf-to-mermaid-md/SKILL.md`](skills/pdf-to-mermaid-md/SKILL.md) for the workflow and [`skills/pdf-to-mermaid-md/references/mermaid_patterns.md`](skills/pdf-to-mermaid-md/references/mermaid_patterns.md) for the diagram-archetype playbook (cyclic flows, drill-down trees, evolution timelines, etc.).
 
+## Bundled Claude Code skills
+
+The repo bundles three Claude Code skills:
+
+- **[`pdf-to-mermaid-md`](skills/pdf-to-mermaid-md/SKILL.md)** — the conversion skill above. Generic across paired question/tool PDFs.
+- **[`doview-outcomes-answer`](skills/doview-outcomes-answer/SKILL.md)** — faithful adaptation of *Prompt A — Outcomes Theory Text Response Prompt v1.1.9* from [doviewplanning.org/bookai](https://www.doviewplanning.org/bookai). Answers outcomes-theory questions strictly from Dr Paul Duignan's handbook with the prompt's required Summary + Full structure and raw-visible URL rules.
+- **[`doview-image-retriever`](skills/doview-image-retriever/SKILL.md)** — faithful adaptation of *Prompt B — Outcomes Theory Book Image Retriever Prompt v1.1.9*, with a Mermaid-first overlay that retrieves Mermaid blocks from this repo's chapter `tool.md` files (falling back to upstream PNG/image-file URLs for diagrams that don't translate cleanly to Mermaid). Pairs with `doview-outcomes-answer`.
+
+The two `doview-*` skills are also published in the [cgbarlow-skills](https://github.com/cgbarlow/skills) Claude plugin marketplace.
+
 ## Architecture decisions
 
 The *why* behind the structure above is captured as ADRs — short, immutable records of each technical decision plus the rejected alternatives. Browse them in [`docs/adrs/`](docs/adrs/):
