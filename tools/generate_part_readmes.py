@@ -74,6 +74,13 @@ def generate_for_part(part_dir: Path) -> str:
     )
 
     lines = [
+        "---",
+        f"part: {letter}",
+        f"title: {title}",
+        "kind: part-index",
+        f"chapters: {len(chapter_folders)}",
+        "---",
+        "",
         f"# Part {letter} — {title}",
         "",
         description,

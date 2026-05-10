@@ -2,7 +2,9 @@
 
 ## Status
 
-Accepted — 2026-05-10
+Superseded by [ADR-012](ADR-012-Zero-Padded-Chapter-Names.md) — 2026-05-10
+
+(Originally accepted earlier on 2026-05-10. The 1:1 filename mapping between `docs/md/` and `docs/pdf/` is no longer maintained; see ADR-012 for the new rule and the trade-off.)
 
 ## Why
 
