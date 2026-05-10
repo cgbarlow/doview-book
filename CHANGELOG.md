@@ -33,8 +33,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - `skills/doview-outcomes-answer/` — Claude Code skill, faithful adaptation of *Prompt A — Outcomes Theory Text Response Prompt v1.1.9* from https://www.doviewplanning.org/bookai. Answers outcomes-theory questions strictly from the handbook with the prompt's required Summary + Full standalone structure and raw-visible URL rules.
 - `docs/md/Part X - …/README.md` (×10) — mini-TOC inside each Part folder, listing chapters in numerical order with links to each chapter's `xxquestion.md` entry point.
 - `tools/generate_part_readmes.py` — helper that generates the per-Part READMEs.
+- `tools/zero_pad_chapter_names.py` — one-shot helper that renamed chapter folders + Markdown files to the Xnn format.
+- ADR-012 — Zero-padded chapter folder and file names (supersedes ADR-006).
 
 ### Changed
+
+- All 109 chapter folders renamed from `XN[suffix]` to `Xnn[suffix]` format (`A1` → `A01`, `G2A` → `G02A`, etc.). All 218 chapter Markdown files renamed accordingly. Cross-links inside chapter files and YAML `pair:` frontmatter updated to match. Part-folder READMEs regenerated. Source PDFs in `docs/pdf/` are unchanged — the `source_pdf:` frontmatter field still points at the as-published filename (e.g. `docs/pdf/a1question.pdf`).
 
 - `README.md` — rewritten as a reader-friendly book front page with a Table of Contents linking to the introduction, every Part, and the conclusion. The previous technical content moved to `BUILD.md`.
 

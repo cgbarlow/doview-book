@@ -4,14 +4,14 @@ Types of evaluation, strategic evaluation/research planning, impact evaluation s
 
 ## Chapters
 
-- [G1 — Types of Evaluation Mapped Onto the DoView Planning Framework](<G1 - Types of Evaluation Mapped Onto the DoView Planning Framework/g1question.md>)
-- [G2 — Strategic Evaluation Approach](<G2 - Strategic Evaluation Approach/g2question.md>)
-- [G2A — Evaluating Individual Components or Streams Within an Initiative or Program](<G2A - Evaluating Individual Components or Streams Within an Initiative or Program/g2aquestion.md>)
-- [G3 — Strategic Research Planning](<G3 - Strategic Research Planning/g3question.md>)
-- [G4 — Different Types of Evaluation Over an Initiative's Life-Cycle](<G4 - Different Types of Evaluation Over an Initiative's Life-Cycle/g4question.md>)
-- [G5 — When Impact Evaluation Is Needed Rather Than Just Measuring High-Level Outcome Indicators](<G5 - When Impact Evaluation Is Needed Rather Than Just Measuring High-Level Outcome Indicators/g5question.md>)
-- [G6 — Generic Evaluation Questions List](<G6 - Generic Evaluation Questions List/g6question.md>)
-- [G7 — Mapping a Set of Evaluation Questions Onto a Strategy or Outcomes Diagram](<G7 - Mapping a Set of Evaluation Questions Onto a Strategy or Outcomes Diagram/g7question.md>)
+- [G01 — Types of Evaluation Mapped Onto the DoView Planning Framework](<G01 - Types of Evaluation Mapped Onto the DoView Planning Framework/g01question.md>)
+- [G02 — Strategic Evaluation Approach](<G02 - Strategic Evaluation Approach/g02question.md>)
+- [G02A — Evaluating Individual Components or Streams Within an Initiative or Program](<G02A - Evaluating Individual Components or Streams Within an Initiative or Program/g02aquestion.md>)
+- [G03 — Strategic Research Planning](<G03 - Strategic Research Planning/g03question.md>)
+- [G04 — Different Types of Evaluation Over an Initiative's Life-Cycle](<G04 - Different Types of Evaluation Over an Initiative's Life-Cycle/g04question.md>)
+- [G05 — When Impact Evaluation Is Needed Rather Than Just Measuring High-Level Outcome Indicators](<G05 - When Impact Evaluation Is Needed Rather Than Just Measuring High-Level Outcome Indicators/g05question.md>)
+- [G06 — Generic Evaluation Questions List](<G06 - Generic Evaluation Questions List/g06question.md>)
+- [G07 — Mapping a Set of Evaluation Questions Onto a Strategy or Outcomes Diagram](<G07 - Mapping a Set of Evaluation Questions Onto a Strategy or Outcomes Diagram/g07question.md>)
 - [G10 — When Purchasers or Funders or Control Agencies Should Consider Alternatives to Impact Evaluation Checklist](<G10 - When Purchasers or Funders or Control Agencies Should Consider Alternatives to Impact Evaluation Checklist/g10question.md>)
 - [G11 — Impact Evaluation Design Types](<G11 - Impact Evaluation Design Types/g11question.md>)
 - [G12 — Impact Evaluation Suitability Check](<G12 - Impact Evaluation Suitability Check/g12question.md>)
