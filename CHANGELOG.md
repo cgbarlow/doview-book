@@ -30,6 +30,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - `BUILD.md` — preserves the previous technical README content (file structure, viewing, conversion approach, ADR index).
 - `CHANGELOG.md` — this file.
 
+- `skills/doview-outcomes-answer/` — Claude Code skill, faithful adaptation of *Prompt A — Outcomes Theory Text Response Prompt v1.1.9* from https://www.doviewplanning.org/bookai. Answers outcomes-theory questions strictly from the handbook with the prompt's required Summary + Full standalone structure and raw-visible URL rules.
+- `docs/md/Part X - …/README.md` (×10) — mini-TOC inside each Part folder, listing chapters in numerical order with links to each chapter's `xxquestion.md` entry point.
+- `tools/generate_part_readmes.py` — helper that generates the per-Part READMEs.
+
 ### Changed
 
 - `README.md` — rewritten as a reader-friendly book front page with a Table of Contents linking to the introduction, every Part, and the conclusion. The previous technical content moved to `BUILD.md`.
