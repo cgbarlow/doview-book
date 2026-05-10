@@ -9,7 +9,7 @@ For the canonical original, see [DoViewPlanning.org](https://www.doviewplanning.
 ```
 docs/
   pdf/    — original handbook PDFs (the source of truth)
-  pptx/   — DoView framework drilldown template (PowerPoint)
+  pptx/   — drill-down PowerPoint template for Tool D1 (overview slide + one slide per framework component, ready for a strategist to fill in)
   md/     — markdown conversion, organised by Part > Chapter
 skills/
   pdf-to-mermaid-md/  — Claude Code skill that produced the markdown
