@@ -11,6 +11,8 @@ docs/
   pdf/    — original handbook PDFs (the source of truth)
   pptx/   — DoView framework drilldown template (PowerPoint)
   md/     — markdown conversion, organised by Part > Chapter
+skills/
+  pdf-to-mermaid-md/  — Claude Code skill that produced the markdown
 LICENSE.md
 README.md
 ```
@@ -39,7 +41,7 @@ A handful of source diagrams (e.g. C4's large real-world visual alignment poster
 
 ## How the conversion was done
 
-PDFs were processed through a Claude Code skill (`pdf-to-mermaid-md`) that:
+PDFs were processed through a Claude Code skill — [`skills/pdf-to-mermaid-md/`](skills/pdf-to-mermaid-md/SKILL.md) — that:
 
 1. Reads each PDF natively (text + page render),
 2. Identifies prose, diagrams, and matrices,
@@ -48,6 +50,8 @@ PDFs were processed through a Claude Code skill (`pdf-to-mermaid-md`) that:
 5. Skips re-conversion if the target `.md` already exists.
 
 Pair files for each chapter share the same folder, so the relative cross-links resolve without rewriting.
+
+The skill is generic — point it at any directory of paired question/tool PDFs and it'll do the same. See [`skills/pdf-to-mermaid-md/SKILL.md`](skills/pdf-to-mermaid-md/SKILL.md) for the workflow and [`skills/pdf-to-mermaid-md/references/mermaid_patterns.md`](skills/pdf-to-mermaid-md/references/mermaid_patterns.md) for the diagram-archetype playbook (cyclic flows, drill-down trees, evolution timelines, etc.).
 
 ## Attribution
 
