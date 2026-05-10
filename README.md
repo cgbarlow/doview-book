@@ -1,64 +1,59 @@
-# DoView Planning Handbook — Markdown edition
+# DoView Planning and Outcomes Theory Handbook
 
-A markdown conversion of *DoView Planning and Practical Outcomes Theory Handbook (2025)* by Dr Paul W Duignan, with all diagrams and visual models rendered as Mermaid where they translate cleanly. Source PDFs are kept alongside.
+A complete Markdown edition of *DoView Planning and Practical Outcomes Theory Handbook (2025)* by Dr Paul W Duignan — 100+ integrated tools for planning, implementation, contracting, measurement, evaluation, and reporting. Every visual model is rendered as a Mermaid diagram so you can read the whole book in your editor or on GitHub.
 
-For the canonical original, see [DoViewPlanning.org](https://www.doviewplanning.org).
+For the canonical original (with the author's full website, news, and free app), see [DoViewPlanning.org](https://www.doviewplanning.org).
 
-## What's in here
+## Read the book
 
-```
-docs/
-  pdf/    — original handbook PDFs (the source of truth)
-  pptx/   — drill-down PowerPoint template for Tool D1 (overview slide + one slide per framework component, ready for a strategist to fill in)
-  md/     — markdown conversion, organised by Part > Chapter
-skills/
-  pdf-to-mermaid-md/  — Claude Code skill that produced the markdown
-LICENSE.md
-README.md
-```
+Start here:
 
-## The markdown structure
+- **[Introduction](docs/md/1%20-%20introduction.md)** — what the handbook is and how it's organised.
 
-`docs/md/` mirrors the book's table of contents:
+Then work through the parts:
 
-- `1 - introduction.md` — title, attribution and a TOC linking to each Part
-- `2 - conclusion.md` — closing chapter
-- `Part A - DoView Planning Fundamentals/` … `Part J - AI Applications/` — one folder per part
-  - Inside each Part: chapter folders named `XX - <chapter title>` (e.g. `A1 - The Five Steps in DoView Planning/`)
-  - Each chapter folder contains the question/tool pair as two files: `xxquestion.md` and `xxtool.md`, cross-linked at the top
+| Part | Title |
+|---|---|
+| A | [DoView Planning Fundamentals](<docs/md/Part A - DoView Planning Fundamentals>) |
+| B | [DoView Drawing and Strategy Principles](<docs/md/Part B - DoView Drawing and Strategy Principles>) |
+| C | [Alignment and Prioritization](<docs/md/Part C - Alignment and Prioritization>) |
+| D | [Indicators and Frameworks](<docs/md/Part D - Indicators and Frameworks>) |
+| E | [Contracting and Delegation](<docs/md/Part E - Contracting and Delegation>) |
+| F | [Performance Improvement](<docs/md/Part F - Performance Improvement>) |
+| G | [Evaluation and Research](<docs/md/Part G - Evaluation and Research>) |
+| H | [Reporting](<docs/md/Part H - Reporting>) |
+| I | [Implementation and Integration](<docs/md/Part I - Implementation and Integration>) |
+| J | [AI Applications](<docs/md/Part J - AI Applications>) |
 
-There are 109 chapter pairs across Parts A–J plus the introduction and conclusion — 219 markdown files total, one per source PDF.
+And finally:
 
-## Viewing the diagrams
+- **[Conclusion](docs/md/2%20-%20conclusion.md)**
 
-Each `*tool.md` whose source contained a visual model has a `## Diagram` section with a fenced ```mermaid block. To render these:
+## How to read
 
-- **VS Code** — install the [`bierner.markdown-mermaid`](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) extension, then open any `.md` file and press `Ctrl+Shift+V` (or `Cmd+Shift+V` on Mac) for the rendered preview.
-- **GitHub** — Mermaid blocks render natively in the web UI when browsing the repo.
-- **Obsidian / Logseq / Typora** — Mermaid is supported natively.
+Each chapter is a **pair** of pages kept in the same folder:
 
-A handful of source diagrams (e.g. C4's large real-world visual alignment poster) cannot be expressed cleanly in Mermaid; those pages note this and describe the visual in prose.
+- A **question** page (e.g. `a1question.md`) — the question the chapter answers, plus several paragraphs of explanatory prose.
+- A **tool** page (e.g. `a1tool.md`) — the visual model, framework, or checklist that does the work.
 
-## How the conversion was done
+The two pages cross-link at the top, so you can hop between them while reading.
 
-PDFs were processed through a Claude Code skill — [`skills/pdf-to-mermaid-md/`](skills/pdf-to-mermaid-md/SKILL.md) — that:
+To get the diagrams to render:
 
-1. Reads each PDF natively (text + page render),
-2. Identifies prose, diagrams, and matrices,
-3. Writes a markdown file with YAML frontmatter, an H1 title, a pair-link line, body prose, and a `## Diagram` section using the most appropriate Mermaid pattern (or a markdown table for matrices),
-4. Cross-links each `xxquestion.md` ↔ `xxtool.md` pair,
-5. Skips re-conversion if the target `.md` already exists.
+- **VS Code** — install the [`bierner.markdown-mermaid`](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) extension, then press `Ctrl+Shift+V` (or `Cmd+Shift+V` on Mac) on any chapter file.
+- **GitHub** — Mermaid blocks render natively when you browse the repo on github.com.
+- **Obsidian / Logseq / Typora** — Mermaid is supported out of the box.
 
-Pair files for each chapter share the same folder, so the relative cross-links resolve without rewriting.
+The original handbook PDFs live under [`docs/pdf/`](docs/pdf/) if you'd rather read the source pages directly.
 
-The skill is generic — point it at any directory of paired question/tool PDFs and it'll do the same. See [`skills/pdf-to-mermaid-md/SKILL.md`](skills/pdf-to-mermaid-md/SKILL.md) for the workflow and [`skills/pdf-to-mermaid-md/references/mermaid_patterns.md`](skills/pdf-to-mermaid-md/references/mermaid_patterns.md) for the diagram-archetype playbook (cyclic flows, drill-down trees, evolution timelines, etc.).
+## About this edition
 
-## Attribution
+The Markdown was generated by a Claude Code skill from the original 219 PDF pages, organised into the Part / Chapter structure used in the book. The conversion is faithful to the source text; visual models that don't translate cleanly to Mermaid are described in prose and noted on the page.
 
-This work is adapted from the *DoView Planning and Practical Outcomes Theory Handbook (2025)* by Dr Paul W Duignan, published at [DoViewPlanning.org](https://www.doviewplanning.org). All methodology, tool content, diagrams, and accompanying text are © Dr Paul W Duignan and DoViewPlanning.Org.
+If you want to know how this was built, the file layout, design decisions (ADRs), or the bundled skill, see **[BUILD.md](BUILD.md)**.
 
-DoView® is a registered trademark. Use of DoView® Marks must comply with the [Attribution & Trademark Use Policy](https://www.doviewplanning.org/trademarkuse).
+## Attribution and license
 
-## License
+Adapted from *DoView Planning and Practical Outcomes Theory Handbook (2025)* by Dr Paul W Duignan, [DoViewPlanning.org](https://www.doviewplanning.org). All methodology, tool content, diagrams, and accompanying text are © Dr Paul W Duignan and DoViewPlanning.Org.
 
-Free to use, copy, share, and adapt for any purpose (including commercial) with attribution. See [LICENSE.md](LICENSE.md) for full terms.
+Free to use, copy, share, and adapt for any purpose (including commercial) with attribution. DoView® is a registered trademark — see the [Trademark Use Policy](https://www.doviewplanning.org/trademarkuse) and the full [LICENSE.md](LICENSE.md).
