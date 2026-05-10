@@ -73,6 +73,9 @@ The *why* behind the structure above is captured as ADRs — short, immutable re
 - [ADR-006 — Preserve original filenames inside chapter folders](docs/adrs/ADR-006-Preserve-Original-Filenames.md)
 - [ADR-007 — Idempotent conversion: skip if `.md` already exists](docs/adrs/ADR-007-Idempotent-Conversion.md)
 - [ADR-008 — Licensing: free use with attribution; mirror DoView trademark policy](docs/adrs/ADR-008-Licensing.md)
+- [ADR-009 — Faithful adaptation policy for external prompts](docs/adrs/ADR-009-Faithful-Prompt-Adaptation.md)
+- [ADR-010 — Two separate skills mirroring Prompt A and Prompt B](docs/adrs/ADR-010-Two-Skills-Not-One.md) (specs: [SPEC-010-A](docs/adrs/specs/SPEC-010-A-Skill-doview-outcomes-answer.md), [SPEC-010-B](docs/adrs/specs/SPEC-010-B-Skill-doview-image-retriever.md))
+- [ADR-011 — Marketplace integration approach](docs/adrs/ADR-011-Marketplace-Integration.md) (spec: [SPEC-011-A](docs/adrs/specs/SPEC-011-A-Marketplace-Sync.md))
 
 This repo follows the workflow described in [cgbarlow/protocols](https://github.com/cgbarlow/protocols/blob/main/protocols.md): ADRs in `docs/adrs/`, specs in `docs/adrs/specs/`, feature branches off `main`, semver via `CHANGELOG.md`.
 

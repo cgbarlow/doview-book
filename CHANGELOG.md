@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ### Added
 
-- `docs/adrs/` — Architecture Decision Records, backfilling existing decisions and bootstrapping the WH(Y) format used in this repo:
+- `docs/adrs/` — Architecture Decision Records, backfilling existing decisions and recording new decisions for the skill work. Bootstraps the WH(Y) format used in this repo:
   - ADR-001 — Enhanced ADR format for this repo
   - ADR-002 — Convert handbook PDFs to Markdown via Claude-native PDF reading
   - ADR-003 — Render visual models as Mermaid; Markdown tables for matrices
@@ -17,10 +17,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
   - ADR-006 — Preserve original filenames inside chapter folders
   - ADR-007 — Idempotent conversion: skip if `.md` already exists
   - ADR-008 — Licensing: free use with attribution; mirror DoView trademark policy
+  - ADR-009 — Faithful adaptation policy for external prompts (Mermaid medium shift for Prompt B)
+  - ADR-010 — Two separate skills mirroring Prompt A and Prompt B (not merged)
+  - ADR-011 — Marketplace integration approach (local-source copy into cgbarlow/skills)
 - `docs/adrs/specs/` — implementation specs:
   - SPEC-002-A — `pdf-to-mermaid-md` skill workflow
   - SPEC-003-A — Mermaid pattern playbook
   - SPEC-004-A — Restructure mapping
+  - SPEC-010-A — `doview-outcomes-answer` skill (Prompt A adaptation)
+  - SPEC-010-B — `doview-image-retriever` skill (Prompt B adaptation with Mermaid extension)
+  - SPEC-011-A — Marketplace sync workflow
 - `BUILD.md` — preserves the previous technical README content (file structure, viewing, conversion approach, ADR index).
 - `CHANGELOG.md` — this file.
 
