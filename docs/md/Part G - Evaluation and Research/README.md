@@ -1,3 +1,10 @@
+---
+part: G
+title: Evaluation and Research
+kind: part-index
+chapters: 23
+---
+
 # Part G — Evaluation and Research
 
 Types of evaluation, strategic evaluation/research planning, impact evaluation suitability, economic evaluation, and M&E plans.

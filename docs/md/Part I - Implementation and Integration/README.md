@@ -1,3 +1,10 @@
+---
+part: I
+title: Implementation and Integration
+kind: part-index
+chapters: 4
+---
+
 # Part I — Implementation and Integration
 
 Introducing DoView Planning into organisations, putting diagrams into existing planning documents, workflow changes, and meeting-room setup.

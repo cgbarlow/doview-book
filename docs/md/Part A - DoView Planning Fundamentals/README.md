@@ -1,3 +1,10 @@
+---
+part: A
+title: DoView Planning Fundamentals
+kind: part-index
+chapters: 5
+---
+
 # Part A — DoView Planning Fundamentals
 
 The five generic steps of DoView Planning and how to apply them within standard government, corporate, and nonprofit planning, implementation, and reporting cycles.

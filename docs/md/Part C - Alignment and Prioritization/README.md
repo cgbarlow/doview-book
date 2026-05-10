@@ -1,3 +1,10 @@
+---
+part: C
+title: Alignment and Prioritization
+kind: part-index
+chapters: 8
+---
+
 # Part C — Alignment and Prioritization
 
 Setting priorities and aligning activities, projects, and outputs against outcomes using DoView Visual Alignment.

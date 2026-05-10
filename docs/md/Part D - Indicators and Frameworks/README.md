@@ -1,3 +1,10 @@
+---
+part: D
+title: Indicators and Frameworks
+kind: part-index
+chapters: 14
+---
+
 # Part D — Indicators and Frameworks
 
 The DoView Planning Framework, indicator/output/KPI selection, and good-indicator checklists.

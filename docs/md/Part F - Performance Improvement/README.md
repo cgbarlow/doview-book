@@ -1,3 +1,10 @@
+---
+part: F
+title: Performance Improvement
+kind: part-index
+chapters: 6
+---
+
 # Part F — Performance Improvement
 
 Using DoView for performance improvement, benchmarking, league-tabling, and embedding evidence in strategy diagrams.

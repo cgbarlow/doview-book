@@ -1,3 +1,10 @@
+---
+part: H
+title: Reporting
+kind: part-index
+chapters: 5
+---
+
 # Part H — Reporting
 
 Reporting indicators and evaluation results back against a DoView strategy, complementing Balanced Scorecards, RBA, and Investment Logic Maps.

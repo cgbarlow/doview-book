@@ -1,3 +1,10 @@
+---
+part: B
+title: DoView Drawing and Strategy Principles
+kind: part-index
+chapters: 25
+---
+
 # Part B — DoView Drawing and Strategy Principles
 
 How DoView strategy/outcomes diagrams work: drawing rules, conventions, drill-down structure, multi-stakeholder coordination, and 'what-if' planning.

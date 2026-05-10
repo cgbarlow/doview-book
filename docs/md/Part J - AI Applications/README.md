@@ -1,3 +1,10 @@
+---
+part: J
+title: AI Applications
+kind: part-index
+chapters: 7
+---
+
 # Part J — AI Applications
 
 Applying outcomes theory and DoView Planning to AI agents, prompting, communication mapping, mathematisation, and dialog processes.

@@ -1,3 +1,10 @@
+---
+part: E
+title: Contracting and Delegation
+kind: part-index
+chapters: 12
+---
+
 # Part E — Contracting and Delegation
 
 Contracting and delegating for outcomes versus outputs, social investment, social bonds, and PPP suitability.
