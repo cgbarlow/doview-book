@@ -31,6 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - `CHANGELOG.md` — this file.
 
 - `skills/doview-outcomes-answer/` — Claude Code skill, faithful adaptation of *Prompt A — Outcomes Theory Text Response Prompt v1.1.9* from https://www.doviewplanning.org/bookai. Answers outcomes-theory questions strictly from the handbook with the prompt's required Summary + Full standalone structure and raw-visible URL rules.
+- `skills/doview-image-retriever/` — Claude Code skill, faithful adaptation of *Prompt B — Outcomes Theory Book Image Retriever Prompt v1.1.9* with a Mermaid-first overlay. Retrieves and reproduces relevant chapter `tool.md` Mermaid blocks as the primary visual, falling back to the upstream PNG/image-file URLs for diagrams that don't translate cleanly to Mermaid. Pairs with `doview-outcomes-answer`.
 - `docs/md/Part X - …/README.md` (×10) — mini-TOC inside each Part folder, listing chapters in numerical order with links to each chapter's `xxquestion.md` entry point.
 - `tools/generate_part_readmes.py` — helper that generates the per-Part READMEs.
 - `tools/zero_pad_chapter_names.py` — one-shot helper that renamed chapter folders + Markdown files to the Xnn format.
