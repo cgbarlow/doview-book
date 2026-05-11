@@ -1,0 +1,4 @@
+.venv-iris-deploy/
+scripts/__pycache__/
+scripts/tests/__pycache__/
+scripts/.pytest_cache/

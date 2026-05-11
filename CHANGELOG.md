@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ## [Unreleased]
 
+### Added
+
+- **`scripts/deploy_to_iris_uat.py`** — publishes the corpus to an Iris instance as a Set of Text diagrams ([ADR-013](docs/adrs/ADR-013-Iris-Deployment-Script.md), [scripts/README.md](scripts/README.md)). Two-pass strategy: create the package hierarchy + diagrams, then rewrite every intra-corpus `.md` link to `iris://diagram/<uuid>` so navigation works inside Iris. Live deploy verified at https://iris-uat.chrisbarlow.nz under the "DoView Strategy Models" collection (230 diagrams, 119 packages).
+- **`scripts/link_rewriter.py`** + tests — pure helpers (`strip_frontmatter`, `rewrite_links`) used by the deployment script. Handles plain `[label](file.md)`, angle-bracket `[label](<folder with spaces/file.md>)`, folder-only links (`<folder>` → `<folder>/index.md`), the out-of-corpus `../../README.md` back-link (rewritten to the introduction diagram), and skips links inside fenced code / inline code so Mermaid arrows (`A-->B`) are not mis-matched.
+- **`docs/adrs/ADR-013-Iris-Deployment-Script.md`** — records the two-pass strategy, link-mapping rules, idempotency choice (fail-fast on duplicate set name), and rejected alternatives.
+
 ## [1.1.0] — 2026-05-10
 
 ### Added
