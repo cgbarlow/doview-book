@@ -1,0 +1,12 @@
+# Jekyll config for the GitHub Pages site at chrisbarlow.nz/doview-book/.
+#
+# jekyll-readme-index makes any folder's README.md serve as the directory
+# index, so the per-Part READMEs under docs/md/Part X - .../ resolve when
+# visited directly. Without it, only the repo-root README is served and
+# subdirectory URLs 404.
+#
+# This plugin is on GitHub Pages' allowed plugin list — no Actions build
+# needed, the default Pages build picks it up.
+
+plugins:
+  - jekyll-readme-index

@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- GitHub Pages 404 on subdirectory URLs (e.g. `Part%20A%20-%20.../`). Added `_config.yml` enabling the `jekyll-readme-index` plugin so every folder's `README.md` is served as that folder's directory index.
+
 ## [1.1.0] — 2026-05-10
 
 ### Added
