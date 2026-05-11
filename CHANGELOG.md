@@ -8,7 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ### Fixed
 
-- GitHub Pages 404 on subdirectory URLs (e.g. `Part%20A%20-%20.../`). Added `_config.yml` enabling the `jekyll-readme-index` plugin so every folder's `README.md` is served as that folder's directory index.
+- GitHub Pages 404 on subdirectory URLs (e.g. `Part%20A%20-%20.../`). Each Part folder's `README.md` is renamed to `index.md` so default Jekyll serves it as the directory index — no plugin needed. The previous attempt (`_config.yml` enabling `jekyll-readme-index`) didn't take effect: the plugin built without error but did not relocate the README to the folder's index URL, so URLs still 404'd.
+
+### Changed
+
+- `tools/generate_part_readmes.py` writes `index.md` (was `README.md`).
+- `_config.yml` removed — no longer needed.
 
 ## [1.1.0] — 2026-05-10
 
