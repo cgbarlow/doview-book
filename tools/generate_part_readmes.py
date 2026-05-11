@@ -108,9 +108,12 @@ def main() -> None:
         key=lambda d: d.name,
     )
     for pd in part_dirs:
-        readme = pd / 'README.md'
-        readme.write_text(generate_for_part(pd))
-        print(f"Wrote {readme.relative_to(MD_DIR)}")
+        # index.md (not README.md) so GitHub Pages serves it as the folder index
+        # without needing a Jekyll plugin. GitHub.com's web UI also auto-renders
+        # index.md as the folder view, so the editorial experience is the same.
+        index = pd / 'index.md'
+        index.write_text(generate_for_part(pd))
+        print(f"Wrote {index.relative_to(MD_DIR)}")
 
 
 if __name__ == '__main__':
