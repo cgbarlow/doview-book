@@ -6,15 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ## [Unreleased]
 
-### Fixed
-
-- GitHub Pages 404 on subdirectory URLs (e.g. `Part%20A%20-%20.../`). Each Part folder's `README.md` is renamed to `index.md` so default Jekyll serves it as the directory index — no plugin needed. The previous attempt (`_config.yml` enabling `jekyll-readme-index`) didn't take effect: the plugin built without error but did not relocate the README to the folder's index URL, so URLs still 404'd.
-
-### Changed
-
-- `tools/generate_part_readmes.py` writes `index.md` (was `README.md`).
-- `_config.yml` removed — no longer needed.
-
 ## [1.1.0] — 2026-05-10
 
 ### Added
@@ -45,8 +36,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ### Changed
 
-- **Chapter folder + file names zero-padded to Xnn format.** All 109 chapter folders renamed from `XN[suffix]` to `Xnn[suffix]` (`A1` → `A01`, `G2A` → `G02A`, etc.). All 218 chapter Markdown files renamed accordingly. Cross-links inside chapter files and YAML `pair:` frontmatter updated to match. Part-folder READMEs regenerated. Source PDFs in `docs/pdf/` are unchanged — the `source_pdf:` frontmatter field still points at the as-published filename (e.g. `docs/pdf/a1question.pdf`).
+- **Chapter folder + file names zero-padded to Xnn format.** All 109 chapter folders renamed from `XN[suffix]` to `Xnn[suffix]` (`A1` → `A01`, `G2A` → `G02A`, etc.). All 218 chapter Markdown files renamed accordingly. Cross-links inside chapter files and YAML `pair:` frontmatter updated to match. Part-folder indexes regenerated. Source PDFs in `docs/pdf/` are unchanged — the `source_pdf:` frontmatter field still points at the as-published filename (e.g. `docs/pdf/a1question.pdf`).
 - **`README.md`** — rewritten as a reader-friendly book front page with a Table of Contents linking to the introduction, every Part, and the conclusion. The previous technical content moved to `BUILD.md`.
+- **Part folder indexes use `index.md`** so the GitHub Pages site (https://chrisbarlow.nz/doview-book/) serves them at the folder URL. (Initially shipped as `README.md` plus a `jekyll-readme-index` plugin attempt; the plugin built without error but didn't actually serve subdirectory READMEs, so the indexes are stored as `index.md` directly. `tools/generate_part_readmes.py` writes `index.md`.)
+
+### Fixed
+
+- GitHub Pages 404 on subdirectory URLs (e.g. `Part%20A%20-%20.../`). See the index.md rename above.
 
 ## [1.0.0] — 2026-05-10
 
