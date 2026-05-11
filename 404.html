@@ -1,0 +1,21 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<script>
+  // If the requested URL ends with ".md", redirect to the same URL with
+  // ".html" — this lets shared/direct deep links that reference .md files
+  // resolve to the Jekyll-converted page.
+  (function () {
+    var p = window.location.pathname;
+    if (/\.md(\/?)$/i.test(p)) {
+      var rewritten = p.replace(/\.md(\/?)$/i, '.html$1') + window.location.search + window.location.hash;
+      window.location.replace(rewritten);
+    }
+  })();
+</script>
+
+# Page not found
+
+The page you're looking for isn't here. Try the [book front page]({{ '/' | relative_url }}) for the table of contents.

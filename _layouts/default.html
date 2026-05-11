@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<style>
+  :root {
+    --fg: #1f2328;
+    --muted: #59636e;
+    --bg: #ffffff;
+    --bg-soft: #f6f8fa;
+    --border: #d1d9e0;
+    --link: #0969da;
+    --link-hover: #0550ae;
+    --code-bg: #f6f8fa;
+    --max-width: 800px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; line-height: 1.5; }
+  .page { max-width: var(--max-width); margin: 0 auto; padding: 32px 24px 64px; }
+  .crumbs { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--link); text-decoration: underline; }
+  h1, h2, h3, h4 { line-height: 1.25; margin-top: 1.5em; margin-bottom: 0.5em; }
+  h1 { font-size: 2em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+  h2 { font-size: 1.5em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+  h3 { font-size: 1.25em; }
+  p, ul, ol, blockquote { margin: 0 0 1em; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { color: var(--link-hover); text-decoration: underline; }
+  blockquote { margin: 0 0 1em; padding: 0 1em; border-left: 4px solid var(--border); color: var(--muted); }
+  table { border-collapse: collapse; margin: 0 0 1em; display: block; overflow-x: auto; }
+  th, td { padding: 6px 13px; border: 1px solid var(--border); }
+  thead { background: var(--bg-soft); }
+  pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 85%; }
+  pre { background: var(--code-bg); padding: 16px; overflow-x: auto; border-radius: 6px; }
+  code { background: var(--code-bg); padding: 2px 4px; border-radius: 3px; }
+  pre code { background: transparent; padding: 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }
+  .mermaid { background: var(--bg); margin: 1em 0; text-align: center; }
+  footer { max-width: var(--max-width); margin: 0 auto; padding: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main class="page">
+<nav class="crumbs">
+  <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+</nav>
+{{ content }}
+</main>
+<footer>
+  Markdown edition of <em>DoView Planning and Practical Outcomes Theory Handbook (2025)</em> by Dr Paul W Duignan.
+  Source content © Dr Paul W Duignan and <a href="https://www.doviewplanning.org">DoViewPlanning.Org</a>.
+  DoView® is a registered trademark — see the <a href="https://www.doviewplanning.org/trademarkuse">Trademark Use Policy</a>.
+  <br>
+  <a href="https://github.com/cgbarlow/doview-book">Repository</a>.
+</footer>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  // Convert Jekyll-rendered fenced Mermaid blocks into Mermaid.js targets.
+  // kramdown emits `<div class="language-mermaid"><div class="highlight"><pre><code>...</code></pre></div></div>`.
+  document.querySelectorAll('div.language-mermaid, pre > code.language-mermaid').forEach((el) => {
+    const codeEl = el.matches('code') ? el : el.querySelector('code');
+    if (!codeEl) return;
+    const target = el.matches('code') ? el.parentElement : el;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'mermaid';
+    wrapper.textContent = codeEl.textContent;
+    target.replaceWith(wrapper);
+  });
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run();
+</script>
+
+<script>
+  // Rewrite internal .md links to .html on the fly so Pages serves the
+  // Jekyll-converted page when clicked. Plays well with anchor fragments
+  // and the angle-bracket / URL-encoded link forms used in our content.
+  document.querySelectorAll('a[href]').forEach((a) => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    // Skip external / fragment-only / non-md hrefs
+    if (/^(https?:|mailto:|#|\/\/)/i.test(href)) return;
+    if (!/\.md(\?|#|$)/i.test(href)) return;
+    a.setAttribute('href', href.replace(/\.md(\?|#|$)/i, '.html$1'));
+  });
+</script>
+</body>
+</html>

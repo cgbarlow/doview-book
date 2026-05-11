@@ -1,14 +1,20 @@
 # Jekyll config for the GitHub Pages site at chrisbarlow.nz/doview-book/.
 #
-# jekyll-relative-links rewrites Markdown links to local .md files so
-# they resolve to the corresponding .html at the converted URL. Without
-# it, [Foo](bar.md) renders as a link to bar.md on Pages, which 404s
-# because Jekyll built the page as bar.html.
+# The site goal is to mirror the github.com reading experience:
+#   - Markdown renders as HTML
+#   - Mermaid code blocks render as actual diagrams (via Mermaid.js)
+#   - Internal links between pages work, even though links in the source
+#     are written as .md (so github.com browsing works too)
 #
-# This plugin is on GitHub Pages' allowed plugin list and is documented
-# as default-enabled; specifying it here explicitly along with the
-# relative_links config ensures it activates against this repo's
-# subdirectory READMEs and chapter-pair cross-links.
+# Plugins:
+#   jekyll-relative-links handles simple "[Foo](bar.md)" links. Where the
+#   plugin doesn't rewrite (angle-bracket form, encoded paths inside bold,
+#   etc.), the default layout's client-side script rewrites .md hrefs to
+#   .html at click time. The 404 page redirects direct .md URL hits to the
+#   .html equivalent.
+
+title: DoView Planning and Outcomes Theory Handbook
+description: Markdown edition of Dr Paul W Duignan's DoView Planning and Outcomes Theory Handbook (2025), with diagrams rendered as Mermaid.
 
 plugins:
   - jekyll-relative-links
@@ -16,3 +22,15 @@ plugins:
 relative_links:
   enabled: true
   collections: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - tools/
+  - skills/
+  - .venv-iris-deploy/
+  - "*.py"
