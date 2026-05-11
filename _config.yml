@@ -1,0 +1,18 @@
+# Jekyll config for the GitHub Pages site at chrisbarlow.nz/doview-book/.
+#
+# jekyll-relative-links rewrites Markdown links to local .md files so
+# they resolve to the corresponding .html at the converted URL. Without
+# it, [Foo](bar.md) renders as a link to bar.md on Pages, which 404s
+# because Jekyll built the page as bar.html.
+#
+# This plugin is on GitHub Pages' allowed plugin list and is documented
+# as default-enabled; specifying it here explicitly along with the
+# relative_links config ensures it activates against this repo's
+# subdirectory READMEs and chapter-pair cross-links.
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
